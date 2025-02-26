@@ -1,7 +1,7 @@
 package com.scorestable.restapi;
 
-import com.scorestable.restapi.model.Match;
-import com.scorestable.restapi.repository.MatchRepository;
+import com.scorestable.restapi.Match;
+import com.scorestable.restapi.MatchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class MatchService {
     private final MatchRepository matchRepository;
 
     @Autowired
-    public MatchService(MatchService matchService) {
+    public MatchService(MatchRepository matchRepository) {
         this.matchRepository = matchRepository;
     }
 
@@ -27,7 +27,7 @@ public class MatchService {
     }
 
     public Match createMatch(Match match) {
-        return matchRepository.save(match)
+        return matchRepository.save(match);
     }
 
     public void deleteMatch(Long id) {

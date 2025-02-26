@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class Match {
     @Id
-    @GeneratedValue(strategy = GeneratioType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String sport;
@@ -79,6 +79,5 @@ public class Match {
     public void setScore2(Integer score2) {
         this.score2 = score2;
     }
-
-
+    
 }
