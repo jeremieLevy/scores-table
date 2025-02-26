@@ -1,7 +1,7 @@
 package com.scorestable.restapi;
 
-import com.scorestable.restapi.model.Match;
-import com.scorestable.restapi.service.MatchService;
+import com.scorestable.restapi.Match;
+import com.scorestable.restapi.MatchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +28,7 @@ public class MatchController {
     }
 
     @PostMapping
-    public Match createMatch(@RequestedBody Match match) {
+    public Match createMatch(@RequestBody Match match) {
         return matchService.createMatch(match) ;
     }
 

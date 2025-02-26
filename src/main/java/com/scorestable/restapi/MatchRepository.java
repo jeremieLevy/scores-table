@@ -1,5 +1,5 @@
 package com.scorestable.restapi;
-import com.scorestable.restapi.model.Match;
+import com.scorestable.restapi.Match;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
